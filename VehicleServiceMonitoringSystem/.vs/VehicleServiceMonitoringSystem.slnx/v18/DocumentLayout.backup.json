@@ -1,0 +1,45 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\RALF\\Downloads\\IT_ELECTIVE_2_MIDTERM_EXAM_set_1_Arciaga_Ralf\\VehicleServiceMonitoringSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4059B270-F36F-4955-8BFD-A1C15D7114C8}|VehicleServiceMonitoringSystem\\VehicleServiceMonitoringSystem.csproj|c:\\users\\ralf\\downloads\\it_elective_2_midterm_exam_set_1_arciaga_ralf\\vehicleservicemonitoringsystem\\vehicleservicemonitoringsystem\\repositories\\servicejobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4059B270-F36F-4955-8BFD-A1C15D7114C8}|VehicleServiceMonitoringSystem\\VehicleServiceMonitoringSystem.csproj|solutionrelative:vehicleservicemonitoringsystem\\repositories\\servicejobrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ServiceJobRepository.cs",
+              "DocumentMoniker": "C:\\Users\\RALF\\Downloads\\IT_ELECTIVE_2_MIDTERM_EXAM_set_1_Arciaga_Ralf\\VehicleServiceMonitoringSystem\\VehicleServiceMonitoringSystem\\Repositories\\ServiceJobRepository.cs",
+              "RelativeDocumentMoniker": "VehicleServiceMonitoringSystem\\Repositories\\ServiceJobRepository.cs",
+              "ToolTip": "C:\\Users\\RALF\\Downloads\\IT_ELECTIVE_2_MIDTERM_EXAM_set_1_Arciaga_Ralf\\VehicleServiceMonitoringSystem\\VehicleServiceMonitoringSystem\\Repositories\\ServiceJobRepository.cs",
+              "RelativeToolTip": "VehicleServiceMonitoringSystem\\Repositories\\ServiceJobRepository.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAmwE0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-08T01:44:05.407Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

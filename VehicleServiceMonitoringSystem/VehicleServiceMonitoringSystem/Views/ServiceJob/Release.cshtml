@@ -1,0 +1,163 @@
+﻿@model VehicleServiceMonitoringSystem.DTOs.ServiceJobReleaseDto
+
+@{
+    ViewData["Title"] = "Release Vehicle";
+}
+
+<div class="container py-4">
+
+    <div class="mb-4">
+        <h2>Release Vehicle</h2>
+
+        <p class="text-muted">
+            Confirm the release of this vehicle.
+        </p>
+    </div>
+
+    <div class="card shadow-sm">
+
+        <div class="card-body p-4">
+
+            <div class="alert alert-warning">
+                <strong>Confirm Vehicle Release</strong>
+                <p class="mb-0 mt-2">
+                    Are you sure you want to release this vehicle?
+                    The current date and time will be recorded as the
+                    actual release time.
+                </p>
+            </div>
+
+            <!-- SERVICE INFORMATION -->
+
+            <h5 class="mb-3">Service Information</h5>
+
+            <div class="row mb-3">
+
+                <div class="col-md-6">
+                    <strong>Service Number</strong>
+                    <p class="text-muted">
+                        @Model.ServiceNumber
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <strong>Service Type</strong>
+                    <p class="text-muted">
+                        @Model.ServiceType
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+
+                <div class="col-md-6">
+                    <strong>Customer</strong>
+                    <p class="text-muted">
+                        @Model.CustomerName
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <strong>Vehicle</strong>
+                    <p class="text-muted">
+                        @Model.Vehicle
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="row mb-3">
+
+                <div class="col-md-6">
+                    <strong>Plate Number</strong>
+                    <p class="text-muted">
+                        @Model.PlateNumber
+                    </p>
+                </div>
+
+                <div class="col-md-6">
+                    <strong>Current Status</strong>
+                    <p>
+                        <span class="badge bg-primary">
+                            @Model.Status
+                        </span>
+                    </p>
+                </div>
+
+            </div>
+
+            <hr />
+
+            <!-- CHECK-IN INFORMATION -->
+
+            <h5 class="mb-3">Service Schedule</h5>
+
+            <div class="row mb-4">
+
+                <div class="col-md-6">
+
+                    <strong>Check-in Date & Time</strong>
+
+                    <p class="text-muted">
+                        @Model.CheckInDateTime.ToString(
+                            "MMM dd, yyyy hh:mm tt")
+                    </p>
+
+                </div>
+
+                <div class="col-md-6">
+
+                    <strong>Release Date & Time</strong>
+
+                    <p class="text-muted">
+                        Will be recorded now
+                    </p>
+
+                </div>
+
+            </div>
+
+            <!-- RELEASE FORM -->
+
+            <form asp-controller="ServiceJob"
+                  asp-action="Release"
+                  method="post">
+
+                @Html.AntiForgeryToken()
+
+                <input type="hidden"
+                       name="id"
+                       value="@Model.Id" />
+
+                <input type="hidden"
+                       name="Id"
+                       value="@Model.Id" />
+
+                <div class="d-flex gap-2">
+
+                    <button type="submit"
+                            class="btn btn-success">
+
+                        Confirm Release
+
+                    </button>
+
+                    <a asp-controller="ServiceJob"
+                       asp-action="Details"
+                       asp-route-id="@Model.Id"
+                       class="btn btn-secondary">
+
+                        Cancel
+
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>

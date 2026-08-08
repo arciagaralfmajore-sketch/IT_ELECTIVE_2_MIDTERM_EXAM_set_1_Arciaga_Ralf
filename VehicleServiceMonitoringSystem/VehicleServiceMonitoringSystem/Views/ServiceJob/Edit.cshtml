@@ -1,0 +1,355 @@
+﻿@model VehicleServiceMonitoringSystem.DTOs.ServiceJobEditDto
+
+@{
+    ViewData["Title"] = "Edit Vehicle";
+}
+
+<div class="container py-4">
+
+    <div class="mb-4">
+        <h2>Edit Vehicle Information</h2>
+
+        <p class="text-muted">
+            Update the customer and service information.
+        </p>
+    </div>
+
+    <div class="card shadow-sm">
+
+        <div class="card-body p-4">
+
+            <form asp-action="Edit"
+                  asp-route-id="@Model.Id"
+                  method="post">
+
+                <input asp-for="Id" type="hidden" />
+
+                <div asp-validation-summary="ModelOnly"
+                     class="alert alert-danger">
+                </div>
+
+                <!-- CUSTOMER INFORMATION -->
+
+                <h5 class="mb-3">
+                    Customer Information
+                </h5>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label asp-for="CustomerName"
+                               class="form-label">
+                        </label>
+
+                        <input asp-for="CustomerName"
+                               class="form-control" />
+
+                        <span asp-validation-for="CustomerName"
+                              class="text-danger">
+                        </span>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label asp-for="ContactNumber"
+                               class="form-label">
+                        </label>
+
+                        <input asp-for="ContactNumber"
+                               class="form-control" />
+
+                        <span asp-validation-for="ContactNumber"
+                              class="text-danger">
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <hr />
+
+                <!-- VEHICLE INFORMATION -->
+
+                <h5 class="mb-3">
+                    Vehicle Information
+                </h5>
+
+                <div class="row">
+
+                    <div class="col-md-4 mb-3">
+
+                        <label asp-for="VehicleMake"
+                               class="form-label">
+                        </label>
+
+                        <input asp-for="VehicleMake"
+                               class="form-control" />
+
+                        <span asp-validation-for="VehicleMake"
+                              class="text-danger">
+                        </span>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+
+                        <label asp-for="VehicleModel"
+                               class="form-label">
+                        </label>
+
+                        <input asp-for="VehicleModel"
+                               class="form-control" />
+
+                        <span asp-validation-for="VehicleModel"
+                              class="text-danger">
+                        </span>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+
+                        <label asp-for="ModelYear"
+                               class="form-label">
+                        </label>
+
+                        <input asp-for="ModelYear"
+                               type="number"
+                               class="form-control" />
+
+                        <span asp-validation-for="ModelYear"
+                              class="text-danger">
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="col-md-6 mb-3">
+
+                        <label asp-for="PlateNumber"
+                               class="form-label">
+                        </label>
+
+                        <input asp-for="PlateNumber"
+                               class="form-control" />
+
+                        <span asp-validation-for="PlateNumber"
+                              class="text-danger">
+                        </span>
+
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+
+                        <label asp-for="VehicleColor"
+                               class="form-label">
+                        </label>
+
+                        <input asp-for="VehicleColor"
+                               class="form-control" />
+
+                        <span asp-validation-for="VehicleColor"
+                              class="text-danger">
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <hr />
+
+                <!-- SERVICE INFORMATION -->
+
+                <h5 class="mb-3">
+                    Service Information
+                </h5>
+
+                <div class="row">
+
+                    <div class="col-md-4 mb-3">
+
+                        <label asp-for="ServiceType"
+                               class="form-label">
+                        </label>
+
+                        <select asp-for="ServiceType"
+                                class="form-select">
+
+                            <option value="">
+                                Select Service Type
+                            </option>
+
+                            <option value="Preventive Maintenance">
+                                Preventive Maintenance
+                            </option>
+
+                            <option value="Oil Change">
+                                Oil Change
+                            </option>
+
+                            <option value="General Repair">
+                                General Repair
+                            </option>
+
+                            <option value="Electrical">
+                                Electrical
+                            </option>
+
+                            <option value="Diagnostics">
+                                Diagnostics
+                            </option>
+
+                            <option value="Body Repair">
+                                Body Repair
+                            </option>
+
+                        </select>
+
+                        <span asp-validation-for="ServiceType"
+                              class="text-danger">
+                        </span>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+
+                        <label asp-for="ServiceBay"
+                               class="form-label">
+                        </label>
+
+                        <select asp-for="ServiceBay"
+                                class="form-select">
+
+                            <option value="">
+                                Select Service Bay
+                            </option>
+
+                            <option value="Bay 1">
+                                Bay 1
+                            </option>
+
+                            <option value="Bay 2">
+                                Bay 2
+                            </option>
+
+                            <option value="Bay 3">
+                                Bay 3
+                            </option>
+
+                            <option value="Bay 4">
+                                Bay 4
+                            </option>
+
+                        </select>
+
+                        <span asp-validation-for="ServiceBay"
+                              class="text-danger">
+                        </span>
+
+                    </div>
+
+                    <div class="col-md-4 mb-3">
+
+                        <label asp-for="ExpectedReleaseDate"
+                               class="form-label">
+                        </label>
+
+                        <input asp-for="ExpectedReleaseDate"
+                               type="date"
+                               class="form-control" />
+
+                        <span asp-validation-for="ExpectedReleaseDate"
+                              class="text-danger">
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- STATUS -->
+
+                <div class="mb-3">
+
+                    <label asp-for="Status"
+                           class="form-label">
+                    </label>
+
+                    <select asp-for="Status"
+                            class="form-select">
+
+                        <option value="Waiting">
+                            Waiting
+                        </option>
+
+                        <option value="In Service">
+                            In Service
+                        </option>
+
+                        <option value="Ready for Release">
+                            Ready for Release
+                        </option>
+
+                        <option value="Released">
+                            Released
+                        </option>
+
+                    </select>
+
+                    <span asp-validation-for="Status"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <!-- REMARKS -->
+
+                <div class="mb-3">
+
+                    <label asp-for="Remarks"
+                           class="form-label">
+                    </label>
+
+                    <textarea asp-for="Remarks"
+                              class="form-control"
+                              rows="4">
+                    </textarea>
+
+                    <span asp-validation-for="Remarks"
+                          class="text-danger">
+                    </span>
+
+                </div>
+
+                <div class="d-flex gap-2">
+
+                    <button type="submit"
+                            class="btn btn-primary">
+                        Save Changes
+                    </button>
+
+                    <a asp-action="Index"
+                       class="btn btn-secondary">
+                        Cancel
+                    </a>
+
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+@section Scripts
+{
+    @{
+        await Html.RenderPartialAsync(
+            "_ValidationScriptsPartial");
+    }
+}
